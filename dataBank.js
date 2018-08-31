@@ -59,7 +59,7 @@ const stateDropdownValues = {
 };
 
 
-
+// holding these as a possible alternative for backgrounds if i cannot get an API to work
 const imageBank = {
   'Alabama' : 'https://i.imgur.com/CXAV3kZ.png',
   'Alaska' : 'https://i.imgur.com/R41GKC1.png',
