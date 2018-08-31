@@ -1,27 +1,27 @@
-let stateDropContainer = $('.state');
-let stateIdNum = stateDropContainer.val();
-let paramDropContainer = $('.param');
-let searchParam = paramDropContainer.val();
-var stateKeys = document.getElementById("stateDropId");
-var informationKeys = document.getElementById("infoDropId");
+let stateDropdownList = $('.state');
+let stateIdNum = stateDropdownList.val();
+let paramDropdownList = $('.param');
+let searchParam = paramDropdownList.val();
+var stateKeys = document.getElementById("stateDrop");
+var parameterKeys = document.getElementById("paramDrop");
 
 //populates the state dropdown list with keys from stateDropdownValues object
 for(index in stateDropdownValues) {
   stateKeys.options[stateKeys.options.length] = new Option(stateDropdownValues[index], index);
 }
 
-//populates the information dropdown list with the keys of infoDropdownValues object
-for(index in infoDropdownValues) {
-  informationKeys.options[informationKeys.options.length] = new Option(infoDropdownValues[index], index);
+//populates the information dropdown list with the keys of paramDropdownValues object
+for(index in paramDropdownValues) {
+  parameterKeys.options[parameterKeys.options.length] = new Option(paramDropdownValues[index], index);
 }
 
 //when either dropdown list changes, this makes a new call
 function stateDropDown () {
   $('.dropDown').on('change',function (event) {
     event.preventDefault(); 
-    stateDropContainer = $('.state');
-    stateIdNum = stateDropContainer.val();
-    searchParam = paramDropContainer.val();
+    stateDropdownList = $('.state');
+    stateIdNum = stateDropdownList.val();
+    searchParam = paramDropdownList.val();
     let stateinfoUrl = `https://api.datausa.io/api/?show=geo&geo=${stateIdNum}&year=latest&required=${searchParam}`;
     getDataFromAPI(stateinfoUrl, displayStateInfo);
   });
@@ -44,6 +44,7 @@ function displayStateInfo (data) {
   $('.data-container').html(""); //clears previous results before appending new ones
   let results = data.data[0];
   let headers = data.headers;
+  //for statement loops through headers and prints both header and data
   for (var i=2; i < data.headers.length; i++) {
     //example of how i would format the headers to be more readable, such as turning 'pop_rank' into 'Population rank'
     var revision1 = headers[i].replace(/_/g, " ");

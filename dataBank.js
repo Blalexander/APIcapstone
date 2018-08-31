@@ -1,4 +1,4 @@
-const infoDropdownValues = {
+const paramDropdownValues = {
   'age,pop,income,pop_rank,income_rank,us_citizens,non_us_citizens' : 'Population & diversity',
   'avg_wage,avg_wage_ft,avg_wage_pt,num_ppl,num_ppl_ft,num_ppl_pt,avg_age,avg_age_ft,avg_age_pt' : 'Workers & wages',
   'income_under10,income_10to15,income_15to20,income_20to25,income_25to30,income_30to35,income_35to40,income_40to45,income_45to50,income_50to60,income_60to75,income_75to100,income_100to125,income_125to150,income_150to200,income_200over' : 'Income distribution'
