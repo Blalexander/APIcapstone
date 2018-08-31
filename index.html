@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>API Capstone</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+    <header class="dropDownListContainer">
+      <form>
+        <select name="state-drop-down" id="stateDropId" class="state dropDown">
+        </select>
+        <br><br>
+      </form>
+
+      <p class="state-name"></p>
+
+      <form>
+        <select name="State-Parameter-Dropdown" id="infoDropId" class="param dropDown">
+        </select>
+      </form>
+    </header>
+
+    <main role="main" class="main-container">
+      <div class="data-container" id="dataContainer"></div>
+    </main>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="dataBank.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

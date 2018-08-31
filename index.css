@@ -1,0 +1,50 @@
+body {
+  box-sizing: border-box;
+  background-color: aqua;
+}
+
+header {
+  width: 100%;
+  border: 3px dashed red;
+  background-color: bisque;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.imageDiv {
+  height: 5vh;
+  width: 5vw;
+}
+
+.state-name {
+  text-align: center;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  border:  5px dotted black;
+}
+
+div {
+  display: flex;
+}
+
+.dropDown {
+  height: 15vh;
+  background-color: bisque;
+  overflow: auto;
+}
+
+.state {
+  float: left;
+}
+
+.param {
+}
+
+.data-container {
+  border: 5px solid lightblue;
+  display: flex;
+  flex-flow: column nowrap;
+}
